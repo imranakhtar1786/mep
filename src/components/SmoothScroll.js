@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,14 +11,14 @@ export default function SmoothScroll({ children }) {
   const btnRef = useRef(null);
 
   const [visible, setVisible] = useState(false);
+  const pathname = usePathname();
 
+  // =========================
+  // INIT LENIS + GSAP
+  // =========================
   useEffect(() => {
-    // =========================
-    // FORCE SCROLL TOP ON REFRESH
-    // =========================
     if (typeof window !== "undefined") {
       window.history.scrollRestoration = "manual";
-
       window.scrollTo(0, 0);
 
       setTimeout(() => {
@@ -25,37 +26,24 @@ export default function SmoothScroll({ children }) {
       }, 10);
     }
 
-    // =========================
-    // GSAP
-    // =========================
     gsap.registerPlugin(ScrollTrigger);
 
-    // =========================
-    // LENIS
-    // =========================
     const lenis = new Lenis({
       duration: 1.4,
       smoothWheel: true,
       wheelMultiplier: 1,
       touchMultiplier: 1.5,
-      easing: (t) =>
-        Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
 
     lenisRef.current = lenis;
 
-    // =========================
-    // LENIS + GSAP SYNC
-    // =========================
     lenis.on("scroll", ScrollTrigger.update);
 
     lenis.on("scroll", ({ scroll }) => {
       setVisible(scroll > 300);
     });
 
-    // =========================
-    // RAF
-    // =========================
     const update = (time) => {
       lenis.raf(time * 1000);
     };
@@ -63,9 +51,6 @@ export default function SmoothScroll({ children }) {
     gsap.ticker.add(update);
     gsap.ticker.lagSmoothing(0);
 
-    // =========================
-    // CLEANUP
-    // =========================
     return () => {
       lenis.destroy();
       gsap.ticker.remove(update);
@@ -73,7 +58,26 @@ export default function SmoothScroll({ children }) {
   }, []);
 
   // =========================
-  // BUTTON ANIMATION
+  // SCROLL TO TOP ON ROUTE CHANGE
+  // =========================
+  useEffect(() => {
+    if (!lenisRef.current) return;
+
+    // Smooth reset on navigation
+    lenisRef.current.scrollTo(0, {
+      duration: 0.8,
+      easing: (t) =>
+        Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+
+    window.scrollTo(0, 0);
+
+    // important for GSAP recalculation
+    ScrollTrigger.refresh();
+  }, [pathname]);
+
+  // =========================
+  // BUTTON SHOW/HIDE ANIMATION
   // =========================
   useEffect(() => {
     if (!btnRef.current) return;
@@ -114,7 +118,7 @@ export default function SmoothScroll({ children }) {
     <>
       {children}
 
-      {/* BUTTON */}
+      {/* SCROLL TO TOP BUTTON */}
       <button
         ref={btnRef}
         onClick={scrollToTop}
@@ -153,12 +157,7 @@ export default function SmoothScroll({ children }) {
           });
         }}
       >
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 20 20"
-          fill="none"
-        >
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
           <path
             d="M10 15V5M10 5L5 10M10 5L15 10"
             stroke="white"
@@ -170,4 +169,4 @@ export default function SmoothScroll({ children }) {
       </button>
     </>
   );
-}
+} 
