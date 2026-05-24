@@ -224,27 +224,50 @@ export default function Home() {
       </section>
 
       {/* 2. STATS SECTION */}
-      <section className="bg-matte-black text-white relative z-10 py-16 border-t border-b border-gold/15" ref={statsRef}>
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-gold/10">
+      <section
+        className="relative z-10 py-10 md:py-10 bg-[#f8f5ef] border-t border-b border-[#C8A45D]/60 overflow-hidden"
+        ref={statsRef}
+      >
+
+        {/* Grid Background */}
+        <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(rgba(200,164,93,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(200,164,93,0.35)_1px,transparent_1px)] bg-[size:90px_90px]" />
+
+        {/* Glow */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C8A45D]/10 blur-3xl rounded-full" />
+
+        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-[#C8A45D]/10">
+
             {stats.map((stat, index) => (
               <div
                 key={stat.label}
                 className={`flex flex-col items-center text-center p-4 ${index > 0 ? "pt-8 md:pt-4" : ""
                   }`}
               >
-                <div className="font-serif text-3xl md:text-5xl text-gold font-light mb-2 flex items-center">
-                  <span className="stat-number" data-target={stat.target}>
+
+                <div className="font-serif text-3xl md:text-5xl text-[#C8A45D] font-light mb-3 flex items-center">
+
+                  <span
+                    className="stat-number"
+                    data-target={stat.target}
+                  >
                     0
                   </span>
+
                   <span>{stat.suffix}</span>
+
                 </div>
-                <div className="font-sans text-[10px] md:text-xs tracking-[0.15em] uppercase text-gray-400 leading-normal max-w-[150px]">
+
+                <div className="text-[10px] md:text-xs tracking-[0.18em] uppercase text-gray-600 leading-normal max-w-[160px]">
                   {stat.label}
                 </div>
+
               </div>
             ))}
+
           </div>
+
         </div>
       </section>
 
@@ -287,7 +310,7 @@ export default function Home() {
 
                 <div className="p-8 relative z-10 flex flex-col gap-6 h-full justify-between">
                   <div className="flex flex-col gap-6">
-                    <div className="w-12 h-12 rounded-none fine-border-gold flex items-center justify-center group-hover:bg-gold transition-colors duration-500">
+                    <div className="w-12 h-12 rounded-none fine-border-gold flex items-center justify-center group-hover:bg-white transition-colors duration-500">
                       <span className="group-hover:text-matte-black transition-colors duration-500">
                         {service.icon}
                       </span>
@@ -391,38 +414,49 @@ export default function Home() {
       </section>
 
       {/* 5. CTA SECTION */}
-      <section className="bg-matte-black text-white relative py-24 md:py-32 overflow-hidden border-t border-gold/15">
+      <section className="relative py-24 md:py-32 overflow-hidden bg-[#f8f5ef] border-t border-[#C8A45D]/20">
 
-        {/* Background architecture wireframe aesthetic */}
-        <div className="absolute inset-0 opacity-5 bg-[linear-gradient(rgba(197,168,128,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(197,168,128,0.15)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
+        {/* Luxury Grid Background */}
+        <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(rgba(200,164,93,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(200,164,93,0.35)_1px,transparent_1px)] bg-[size:100px_100px]" />
+
+        {/* Soft Gradient Glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#C8A45D]/10 blur-3xl rounded-full" />
 
         <div className="max-w-5xl mx-auto px-6 md:px-12 text-center relative z-10 flex flex-col items-center gap-8 scroll-reveal">
-          <p className="text-gold font-sans text-xs font-semibold tracking-[0.3em] uppercase">
+
+          <p className="text-[#C8A45D] text-xs font-semibold tracking-[0.3em] uppercase">
             Let's Collaborate
           </p>
-          <h2 className="text-4xl md:text-6xl font-light tracking-wide leading-tight max-w-3xl">
+
+          <h2 className="text-4xl md:text-6xl font-light tracking-wide leading-tight max-w-3xl text-black">
             Ready to Architect Tomorrow's Infrastructure?
           </h2>
-          <div className="w-16 h-[1px] bg-gold"></div>
-          <p className="font-sans text-sm font-light text-gray-400 leading-relaxed max-w-xl">
-            Inquire today to schedule a detailed design and consulting workshop. Partner with the leaders in MEP system engineering.
+
+          <div className="w-16 h-[1px] bg-[#C8A45D]" />
+
+          <p className="text-sm font-light text-gray-600 leading-relaxed max-w-xl">
+            Inquire today to schedule a detailed design and consulting workshop.
+            Partner with the leaders in MEP system engineering.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
+
             <Link
               href="/contact"
-              className="btn-gold px-10 py-4 bg-gold text-matte-black font-sans text-xs font-bold tracking-[0.2em] uppercase transition-all hover:bg-gold-dark hover:border-gold-dark"
+              className="px-10 py-4 bg-black text-white text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 hover:bg-[#C8A45D] hover:text-black"
             >
               Start Consultation
             </Link>
+
             <a
               href="https://wa.me/1234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-10 py-4 border border-white/20 text-white font-sans text-xs font-bold tracking-[0.2em] uppercase transition-all hover:bg-white hover:text-matte-black flex items-center justify-center gap-2"
+              className="px-10 py-4 border border-black/15 text-black text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 hover:bg-black hover:text-white flex items-center justify-center gap-2"
             >
               Chat on WhatsApp
             </a>
+
           </div>
         </div>
       </section>
