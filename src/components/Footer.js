@@ -92,11 +92,34 @@ export default function Footer() {
 
           {/* Services Quicklist */}
           <div className="flex flex-col gap-6">
-            <h4 className="font-serif text-lg text-gold font-medium tracking-wider">Core Systems</h4>
+            <h4 className="font-serif text-lg text-gold font-medium tracking-wider">
+              Core MEP Services
+            </h4>
+
             <ul className="flex flex-col gap-3 font-sans text-xs tracking-wider text-gray-400">
-              <li className="hover:text-white transition-colors cursor-pointer">Mechanical Design</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Electrical Infrastructure</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Plumbing & Public Health</li>
+              <li className="hover:text-white transition-colors cursor-pointer">
+                HVAC Systems
+              </li>
+
+              <li className="hover:text-white transition-colors cursor-pointer">
+                Electrical Systems
+              </li>
+
+              <li className="hover:text-white transition-colors cursor-pointer">
+                Plumbing Systems
+              </li>
+
+              <li className="hover:text-white transition-colors cursor-pointer">
+                Fire Fighting Systems
+              </li>
+
+              <li className="hover:text-white transition-colors cursor-pointer">
+                ELV & Security Systems
+              </li>
+
+              <li className="hover:text-white transition-colors cursor-pointer">
+                BIM & Engineering Coordination
+              </li>
             </ul>
           </div>
 

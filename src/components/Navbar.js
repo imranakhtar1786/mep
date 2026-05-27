@@ -65,12 +65,7 @@ export default function Navbar() {
           
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <span className={`font-serif text-2xl md:text-3xl font-light tracking-[0.15em] transition-colors duration-300 ${textColor}`}>
-              AURA
-            </span>
-            <span className="font-sans text-[10px] md:text-xs font-bold tracking-[0.25em] text-gold uppercase border-l border-gold/30 pl-2 mt-1">
-              MEP
-            </span>
+            <img src="/logo1.png" alt="Logo" className="w-50" />
           </Link>
 
           {/* Desktop Navigation Links */}

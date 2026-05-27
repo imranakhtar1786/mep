@@ -313,6 +313,134 @@ export default function MainSections() {
           </div>
         </section>
       </div>
+      {/* ========================= */}
+      {/* SECTION 4 - FIRE FIGHTING */}
+      {/* ========================= */}
+      <div className="w-full relative">
+        <section className="section relative z-10 w-full h-auto md:h-screen bg-white flex items-center overflow-hidden">
+          <div className="section-inner relative z-20 w-full h-auto md:h-full flex flex-col md:flex-row">
+
+            {/* IMAGE */}
+            <div className="w-full md:w-1/2 h-[320px] sm:h-[420px] md:h-screen overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=1200"
+                alt="Fire Fighting"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+
+            {/* TEXT */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center px-6 sm:px-8 md:px-20 py-8 md:py-16 text-left md:text-right">
+
+              <span className="fade-up text-[11px] sm:text-sm tracking-[0.25em] uppercase text-[#C8A45D] mb-3 md:mb-4">
+                Fire Protection
+              </span>
+
+              <h2 className="fade-up text-3xl sm:text-4xl md:text-6xl text-black leading-tight mb-5 md:mb-6 font-serif">
+                Advanced Fire Safety
+              </h2>
+
+              <p className="fade-up text-sm md:text-base text-gray-600 leading-relaxed max-w-md md:ml-auto mb-8 md:mb-10">
+                Intelligent fire protection and suppression systems designed
+                for maximum safety and compliance.
+              </p>
+
+              <a
+                href="/services/fire-fighting"
+                className="fade-up inline-block text-[#C8A45D] border-b border-[#C8A45D] pb-2 text-[11px] sm:text-sm uppercase tracking-[0.2em] w-fit md:ml-auto"
+              >
+                Explore
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* ========================= */}
+      {/* SECTION 5 - ELV */}
+      {/* ========================= */}
+      <div className="w-full relative">
+        <section className="section relative z-10 w-full h-auto md:h-screen bg-white flex items-center overflow-hidden">
+          <div className="section-inner relative z-20 w-full h-auto md:h-full flex flex-col-reverse md:flex-row">
+
+            {/* TEXT */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center px-6 sm:px-8 md:px-20 py-8 md:py-16 text-left">
+
+              <span className="fade-up text-[11px] sm:text-sm tracking-[0.25em] uppercase text-[#C8A45D] mb-3 md:mb-4">
+                ELV Systems
+              </span>
+
+              <h2 className="fade-up text-3xl sm:text-4xl md:text-6xl text-black leading-tight mb-5 md:mb-6 font-serif">
+                Smart Building Technology
+              </h2>
+
+              <p className="fade-up text-sm md:text-base text-gray-600 leading-relaxed max-w-md mb-8 md:mb-10">
+                Integrated ELV infrastructure including CCTV, networking,
+                access control and smart automation systems.
+              </p>
+
+              <a
+                href="/services/elv"
+                className="fade-up inline-block text-[#C8A45D] border-b border-[#C8A45D] pb-2 text-[11px] sm:text-sm uppercase tracking-[0.2em] w-fit"
+              >
+                Explore
+              </a>
+            </div>
+
+            {/* IMAGE */}
+            <div className="w-full md:w-1/2 h-[320px] sm:h-[420px] md:h-screen overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200"
+                alt="ELV"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* ========================= */}
+      {/* SECTION 6 - BIM */}
+      {/* ========================= */}
+      <div className="w-full relative">
+        <section className="section relative z-10 w-full h-auto md:h-screen bg-white flex items-center overflow-hidden">
+          <div className="section-inner relative z-20 w-full h-auto md:h-full flex flex-col md:flex-row">
+
+            {/* IMAGE */}
+            <div className="w-full md:w-1/2 h-[320px] sm:h-[420px] md:h-screen overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&q=80&w=1200"
+                alt="BIM"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+
+            {/* TEXT */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center px-6 sm:px-8 md:px-20 py-8 md:py-16 text-left md:text-right">
+
+              <span className="fade-up text-[11px] sm:text-sm tracking-[0.25em] uppercase text-[#C8A45D] mb-3 md:mb-4">
+                BIM Coordination
+              </span>
+
+              <h2 className="fade-up text-3xl sm:text-4xl md:text-6xl text-black leading-tight mb-5 md:mb-6 font-serif">
+                Precision Digital Engineering
+              </h2>
+
+              <p className="fade-up text-sm md:text-base text-gray-600 leading-relaxed max-w-md md:ml-auto mb-8 md:mb-10">
+                Advanced BIM coordination and clash-free engineering
+                solutions for efficient project execution.
+              </p>
+
+              <a
+                href="/services/bim"
+                className="fade-up inline-block text-[#C8A45D] border-b border-[#C8A45D] pb-2 text-[11px] sm:text-sm uppercase tracking-[0.2em] w-fit md:ml-auto"
+              >
+                Explore
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
