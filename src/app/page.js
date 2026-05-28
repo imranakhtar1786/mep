@@ -8,6 +8,13 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FiArrowRight, FiActivity, FiCpu, FiCompass } from "react-icons/fi";
 import { FaBuilding, FaHotel, FaIndustry } from "react-icons/fa";
+import {
+  FiZap,
+  FiWind,
+  FiDroplet,
+  FiShield,
+  FiSun,
+} from "react-icons/fi";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -78,57 +85,141 @@ export default function Home() {
   const heroOpacity = useTransform(scrollY, [0, 500], [1, 0.4]);
 
   const stats = [
-    { number: "25", suffix: "+", label: "Years of Engineering Excellence", target: 25 },
-    { number: "450", suffix: "+", label: "Premium Projects Completed", target: 450 },
-    { number: "12", suffix: "", label: "Global Offices & Hubs", target: 12 },
-    { number: "99", suffix: ".9%", label: "MEP System Operational Uptime", target: 99 },
+    {
+      number: "24",
+      suffix: "/7",
+      label: "Technical Support & Consultation",
+      target: 24,
+    },
+    {
+      number: "100",
+      suffix: "%",
+      label: "Focus on Quality Engineering",
+      target: 100,
+    },
+    {
+      number: "05",
+      suffix: "+",
+      label: "Core MEP Service Solutions",
+      target: 5,
+    },
+    {
+      number: "01",
+      suffix: "",
+      label: "Vision Driven Engineering Brand",
+      target: 1,
+    },
   ];
 
   const previewServices = [
     {
-      icon: <FiCompass className="text-gold text-2xl" />,
-      title: "Mechanical Systems",
-      desc: "Precision heating, cooling, ventilation, and energy distribution systems designed to scale.",
-      link: "/services#mechanical",
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800",
+      title: "Electrical Systems",
+      desc: "Complete LT/HT electrical infrastructure, panel systems, cable routing, lighting automation, and smart power distribution engineered for modern commercial and industrial environments.",
+      image:
+        "/elecrical.png",
+      link: "/services/electrical",
+      icon: <FiZap className="text-xl" />,
     },
+
     {
-      icon: <FiActivity className="text-gold text-2xl" />,
-      title: "Electrical Infrastructure",
-      desc: "Robust power grid designs, sustainable illumination, backup grids, and safety schematics.",
-      link: "/services#electrical",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
+      title: "HVAC Engineering",
+      desc: "Advanced HVAC and ventilation systems designed for thermal comfort, air quality optimization, and energy-efficient climate control solutions.",
+      image:
+        "/hvac.jpg",
+      link: "/services/hvac",
+      icon: <FiWind className="text-xl" />,
     },
+
     {
-      icon: <FiCpu className="text-gold text-2xl" />,
-      title: "Smart Building Automation",
-      desc: "Integrated BMS & IoT systems linking sensors, control panels, and automation grids.",
-      link: "/services#automation",
-      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800",
+      title: "Plumbing Systems",
+      desc: "Smart plumbing infrastructure with efficient water distribution, drainage systems, pressure management, and sustainable water conservation engineering.",
+      image:
+        "/pul.jpg",
+      link: "/services/plumbing",
+      icon: <FiDroplet className="text-xl" />,
+    },
+
+    {
+      title: "Fire Fighting Systems",
+      desc: "Integrated fire safety systems including hydrants, sprinklers, fire alarms, smoke extraction, and emergency protection infrastructure.",
+      image:
+        "/fire.jpg",
+      link: "/services/fire-fighting",
+      icon: <FiShield className="text-xl" />,
+    },
+
+    {
+      title: "Solar Energy Solutions",
+      desc: "Renewable solar infrastructure including rooftop solar systems, energy optimization, and sustainable power integration for smart facilities.",
+      image:
+        "/solr.jpg",
+      link: "/services/solar",
+      icon: <FiSun className="text-xl" />,
+    },
+
+    {
+      title: "Industrial Automation",
+      desc: "Smart automation systems, industrial controls, IoT integrations, and intelligent monitoring solutions for efficient operational management.",
+      image:
+        "/auto.jpg",
+      link: "/services/automation",
+      icon: <FiCpu className="text-xl" />,
     },
   ];
 
   const featuredProjects = [
     {
-      title: "The Obsidian Tower",
-      category: "Commercial & Corporate",
-      location: "London, UK",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
+      title: "Skyline Business Tower",
+      category: "Electrical & HVAC Engineering",
+      location: "Dubai, UAE",
+      image:
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
       icon: <FaBuilding className="text-white text-lg" />,
     },
+
     {
-      title: "Luminary Resort & Spa",
-      category: "Luxury Hotel & Hospitality",
-      location: "Maldives",
-      image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&q=80&w=800",
+      title: "Grand Sapphire Hotel",
+      category: "Complete MEP Infrastructure",
+      location: "Goa, India",
+      image:
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1200",
       icon: <FaHotel className="text-white text-lg" />,
     },
+
     {
-      title: "AeroSmart Logistics Hangar",
-      category: "Industrial Facility",
-      location: "Munich, Germany",
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800",
+      title: "Nova Industrial Plant",
+      category: "Industrial Automation & Fire Fighting",
+      location: "Pune, India",
+      image:
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
       icon: <FaIndustry className="text-white text-lg" />,
+    },
+
+    {
+      title: "Elite Residency",
+      category: "Plumbing & Electrical Systems",
+      location: "Mumbai, India",
+      image:
+        "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&q=80&w=1200",
+      icon: <FaBuilding className="text-white text-lg" />,
+    },
+
+    {
+      title: "SolarTech Corporate Park",
+      category: "Solar Energy & Smart Power",
+      location: "Ahmedabad, India",
+      image:
+        "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=1200",
+      icon: <FaIndustry className="text-white text-lg" />,
+    },
+
+    {
+      title: "Medicare Smart Hospital",
+      category: "HVAC & ELV Systems",
+      location: "Delhi, India",
+      image:
+        "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200",
+      icon: <FaBuilding className="text-white text-lg" />,
     },
   ];
 
@@ -148,7 +239,7 @@ export default function Home() {
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1600')",
+                "url('/banner.png')",
             }}
           />
 
@@ -172,14 +263,6 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full text-white mt-16" ref={heroTextRef}>
           <div className="max-w-3xl">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-gold font-sans text-xs md:text-sm font-semibold tracking-[0.3em] uppercase mb-4"
-            >
-              Mastery in Engineering Design
-            </motion.p>
 
             <h1 className="text-4xl md:text-7xl font-light tracking-wide leading-tight mb-8">
               <span className="char-fade block">Engineering</span>
@@ -225,19 +308,19 @@ export default function Home() {
 
       {/* 2. STATS SECTION */}
       <section
-        className="relative z-10 py-10 md:py-10 bg-[#f8f5ef] border-t border-b border-[#C8A45D]/60 overflow-hidden"
+        className="relative z-10 py-10 md:py-10 bg-black border-t border-b border-[#C8A45D]/60 overflow-hidden"
         ref={statsRef}
       >
 
         {/* Grid Background */}
-        <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(rgba(200,164,93,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(200,164,93,0.35)_1px,transparent_1px)] bg-[size:90px_90px]" />
+        {/* <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(rgba(200,164,93,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(200,164,93,0.35)_1px,transparent_1px)] bg-[size:90px_90px]" /> */}
 
         {/* Glow */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C8A45D]/10 blur-3xl rounded-full" />
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-[#C8A45D]/10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-[white]/50">
 
             {stats.map((stat, index) => (
               <div
@@ -259,7 +342,7 @@ export default function Home() {
 
                 </div>
 
-                <div className="text-[10px] md:text-xs tracking-[0.18em] uppercase text-gray-600 leading-normal max-w-[160px]">
+                <div className="text-[10px] md:text-xs tracking-[0.18em] text-white leading-normal max-w-[160px]">
                   {stat.label}
                 </div>
 
@@ -284,7 +367,7 @@ export default function Home() {
               Silent Precision, Integrated Excellence
             </h2>
             <div className="w-16 h-[1px] bg-gold mb-6"></div>
-            <p className="font-sans text-sm font-light text-gray-500 leading-relaxed max-w-lg">
+            <p className="font-sans text-md font-light text-black-500 leading-relaxed max-w-lg">
               We engineer the essential systems that bring architectural visions to life. Dynamic systems constructed with absolute craftsmanship, performance, and durability.
             </p>
           </div>
@@ -320,7 +403,7 @@ export default function Home() {
                       {service.title}
                     </h3>
 
-                    <p className="font-sans text-xs font-light text-gray-500 leading-relaxed group-hover:text-gray-400 transition-colors duration-300">
+                    <p className="font-sans text-sm font-light text-black-500 leading-relaxed group-hover:text-gray-400 transition-colors duration-300">
                       {service.desc}
                     </p>
                   </div>
@@ -353,20 +436,26 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
 
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 scroll-reveal">
+
             <div className="max-w-xl">
+
               <p className="text-gold font-sans text-xs font-semibold tracking-[0.3em] uppercase mb-3">
-                Selected Work
+                Featured MEP Projects
               </p>
+
               <h2 className="text-3xl md:text-5xl font-light tracking-wide leading-tight text-matte-black">
-                Architectural Icons Engineered By Aura
+                Engineering Modern Infrastructure With Precision
               </h2>
+
             </div>
+
             <Link
               href="/projects"
               className="mt-6 md:mt-0 inline-flex items-center gap-3 font-sans text-xs font-bold tracking-[0.2em] uppercase border-b border-gold pb-1 text-matte-black hover:text-gold transition-colors duration-300"
             >
-              Explore Portfolio <FiArrowRight />
+              View All Projects <FiArrowRight />
             </Link>
+
           </div>
 
           {/* Projects Gallery */}
@@ -425,18 +514,18 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6 md:px-12 text-center relative z-10 flex flex-col items-center gap-8 scroll-reveal">
 
           <p className="text-[#C8A45D] text-xs font-semibold tracking-[0.3em] uppercase">
-            Let's Collaborate
+            Powering Modern Infrastructure
           </p>
 
           <h2 className="text-4xl md:text-6xl font-light tracking-wide leading-tight max-w-3xl text-black">
-            Ready to Architect Tomorrow's Infrastructure?
+            Building Smart MEP Solutions For Tomorrow
           </h2>
 
           <div className="w-16 h-[1px] bg-[#C8A45D]" />
 
-          <p className="text-sm font-light text-gray-600 leading-relaxed max-w-xl">
-            Inquire today to schedule a detailed design and consulting workshop.
-            Partner with the leaders in MEP system engineering.
+          <p className="text-md font-light text-black-600 leading-relaxed max-w-xl">
+            From electrical systems to HVAC, plumbing, fire safety, and automation —
+            we deliver integrated engineering solutions with precision and reliability.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
@@ -445,7 +534,7 @@ export default function Home() {
               href="/contact"
               className="px-10 py-4 bg-black text-white text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 hover:bg-[#C8A45D] hover:text-black"
             >
-              Start Consultation
+              Get Consultation
             </Link>
 
             <a
@@ -454,7 +543,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="px-10 py-4 border border-black/15 text-black text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 hover:bg-black hover:text-white flex items-center justify-center gap-2"
             >
-              Chat on WhatsApp
+              WhatsApp Us
             </a>
 
           </div>

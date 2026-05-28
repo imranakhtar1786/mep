@@ -131,7 +131,7 @@ export default function Contact() {
     >
 
       {/* HERO */}
-      <section className="relative h-[70vh] md:h-[85vh] flex items-center overflow-hidden">
+      <section className="relative h-[100vh] md:h-[100vh] flex items-center overflow-hidden">
 
         {/* BG IMAGE */}
         <div
@@ -149,7 +149,7 @@ export default function Contact() {
         {/* <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-white" /> */}
 
         {/* HERO CONTENT */}
-        <div className="hero-content relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
+        <div className="hero-content relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full mt-20 sm:mt-0 md:mt-20">
 
           <p className="text-white text-xs md:text-sm tracking-[0.35em] uppercase mb-6">
             Premium MEP Engineering

@@ -17,9 +17,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "AURA | Premium MEP Engineering & Infrastructure Design",
-  description: "Aura is a luxury corporate MEP engineering firm specializing in intelligent mechanical, electrical, plumbing, HVAC, fire fighting, and smart building automation systems.",
-  keywords: "MEP engineering, mechanical, electrical, plumbing, HVAC, smart buildings, automation, luxury infrastructure, premium construction, corporate engineering",
+  title: "POWERON ELECTROTECH SOLUTIONS PRIVATE LIMITED | Powering Solutions, Energizing Futures",
+  description: "POWERON ELECTROTECH SOLUTIONS PRIVATE LIMITED is a premier engineering firm delivering advanced electrical, technological, and infrastructure solutions for industries.",
+  keywords: "POWERON ELECTROTECH SOLUTIONS PRIVATE LIMITED, POWERON ELECTROTECH, electrical engineering, industrial power solutions, tech infrastructure, power automation",
   robots: "index, follow",
 };
 

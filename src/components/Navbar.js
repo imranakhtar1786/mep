@@ -65,7 +65,7 @@ export default function Navbar() {
           
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <img src="/logo1.png" alt="Logo" className="w-50" />
+            <img src="/icon1.png" alt="Logo" className="w-10" />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -76,7 +76,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`relative font-sans text-xs font-semibold tracking-[0.2em] uppercase transition-colors duration-300 hover:text-gold ${
+                  className={`relative font-sans text-[14px] font-semibold tracking-[0.2em] uppercase transition-colors duration-300 hover:text-gold ${
                     isActive ? "text-gold" : textColor
                   }`}
                 >
@@ -99,7 +99,7 @@ export default function Navbar() {
               href="https://wa.me/1234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gold hover:text-gold-dark transition-colors text-xl"
+              className="text-gold hover:text-gold-dark transition-colors text-4xl"
               title="Chat on WhatsApp"
             >
               <FaWhatsapp />
@@ -121,7 +121,7 @@ export default function Navbar() {
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-2xl focus:outline-none transition-colors duration-300"
+            className="md:hidden text-5xl focus:outline-none transition-colors duration-300"
             style={{ color: scrolled || !isHomePage ? "var(--color-matte-black)" : "#FFFFFF" }}
             aria-label="Toggle Menu"
           >
