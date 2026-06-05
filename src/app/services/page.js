@@ -26,11 +26,11 @@ export default function MainSections() {
     },
 
     {
-      category: "Plumbing Systems",
-      title: "Sustainable Water Systems",
-      desc: "Efficient plumbing and drainage infrastructure with smart water management and sustainable engineering solutions.",
+      category: "HVAC & Plumbing",
+      title: "HVAC & Plumbing Solutions",
+      desc: "Comprehensive HVAC and plumbing services including air conditioning, ventilation, piping networks, drainage systems, and efficient mechanical infrastructure for modern buildings.",
       image: "/pul.jpg",
-      link: "/services/plumbing",
+      link: "/services/hvac-plumbing",
     },
 
     {

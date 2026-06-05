@@ -298,9 +298,9 @@ export default function About() {
 
             <div className="mb-6 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800"
+                src="/a.jpeg"
                 alt="Director"
-                className="w-full h-[420px] object-cover"
+                className="w-full h-[520px] object-cover"
               />
             </div>
 
@@ -323,9 +323,9 @@ export default function About() {
 
             <div className="mb-6 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800"
+                src="/s.jpeg"
                 alt="Director"
-                className="w-full h-[420px] object-cover"
+                className="w-full h-[520px] object-cover"
               />
             </div>
 
