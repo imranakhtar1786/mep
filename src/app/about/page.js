@@ -294,6 +294,29 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
           {/* DIRECTOR 1 */}
+           <div className="director-card bg-white border border-black/10 p-10">
+
+            <div className="mb-6 overflow-hidden">
+              <img
+                src="/s1.jpeg"
+                alt="Director"
+                className="w-full h-[520px] object-cover"
+              />
+            </div>
+
+            <h3 className="text-3xl font-light mb-2">
+              Savan Kumar
+            </h3>
+
+            <p className="text-[#C8A45D] uppercase tracking-[0.25em] text-xs mb-5">
+              Electrical Engineering Director
+            </p>
+
+            <p className="text-gray-600 leading-relaxed text-sm">
+              Managing advanced electrical systems, smart power infrastructure
+              and integrated automation solutions for modern developments.
+            </p>
+          </div>
           <div className="director-card bg-white border border-black/10 p-10">
 
             <div className="mb-6 overflow-hidden">
@@ -319,29 +342,7 @@ export default function About() {
           </div>
 
           {/* DIRECTOR 2 */}
-          <div className="director-card bg-white border border-black/10 p-10">
-
-            <div className="mb-6 overflow-hidden">
-              <img
-                src="/s.jpeg"
-                alt="Director"
-                className="w-full h-[520px] object-cover"
-              />
-            </div>
-
-            <h3 className="text-3xl font-light mb-2">
-              Savan Kumar
-            </h3>
-
-            <p className="text-[#C8A45D] uppercase tracking-[0.25em] text-xs mb-5">
-              Electrical Engineering Director
-            </p>
-
-            <p className="text-gray-600 leading-relaxed text-sm">
-              Managing advanced electrical systems, smart power infrastructure
-              and integrated automation solutions for modern developments.
-            </p>
-          </div>
+         
 
         </div>
       </section>

@@ -15,11 +15,13 @@ import {
   FiShield,
   FiSun,
 } from "react-icons/fi";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const containerRef = useRef(null);
   const heroTextRef = useRef(null);
   const statsRef = useRef(null);
+   const router = useRouter();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -169,58 +171,12 @@ export default function Home() {
 
   const featuredProjects = [
     {
-      title: "Skyline Business Tower",
-      category: "Electrical & HVAC Engineering",
-      location: "Dubai, UAE",
-      image:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
+      title: "ICMR - School of Public Health",
+      category: "Electrical Engineering",
+      location: "Chennai, India",
+      image: "/p1.jpeg", // Placeholder for engineering/construction project image
       icon: <FaBuilding className="text-white text-lg" />,
-    },
-
-    {
-      title: "Grand Sapphire Hotel",
-      category: "Complete MEP Infrastructure",
-      location: "Goa, India",
-      image:
-        "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1200",
-      icon: <FaHotel className="text-white text-lg" />,
-    },
-
-    {
-      title: "Nova Industrial Plant",
-      category: "Industrial Automation & Fire Fighting",
-      location: "Pune, India",
-      image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
-      icon: <FaIndustry className="text-white text-lg" />,
-    },
-
-    {
-      title: "Elite Residency",
-      category: "Plumbing & Electrical Systems",
-      location: "Mumbai, India",
-      image:
-        "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&q=80&w=1200",
-      icon: <FaBuilding className="text-white text-lg" />,
-    },
-
-    {
-      title: "SolarTech Corporate Park",
-      category: "Solar Energy & Smart Power",
-      location: "Ahmedabad, India",
-      image:
-        "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=1200",
-      icon: <FaIndustry className="text-white text-lg" />,
-    },
-
-    {
-      title: "Medicare Smart Hospital",
-      category: "HVAC & ELV Systems",
-      location: "Delhi, India",
-      image:
-        "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200",
-      icon: <FaBuilding className="text-white text-lg" />,
-    },
+    }
   ];
 
   return (
@@ -409,7 +365,7 @@ export default function Home() {
                   </div>
 
                   <Link
-                    href={service.link}
+                    href="/services"
                     className="flex items-center gap-3 font-sans text-[10px] font-bold tracking-[0.2em] uppercase text-gold group-hover:text-white transition-colors duration-300 w-fit"
                   >
                     Explore System <FiArrowRight className="text-xs transition-transform group-hover:translate-x-2" />
@@ -462,6 +418,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredProjects.map((project, idx) => (
               <div
+                onClick={() => router.push("/projects")}
                 key={project.title}
                 className="scroll-reveal relative h-[500px] group overflow-hidden cursor-pointer"
               >
@@ -538,7 +495,7 @@ export default function Home() {
             </Link>
 
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/8507894280"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-4 border border-black/15 text-black text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 hover:bg-black hover:text-white flex items-center justify-center gap-2"
@@ -549,7 +506,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }

@@ -23,7 +23,7 @@ export default function Footer() {
               Engineering intelligent and sustainable infrastructure. Providing industry-leading Mechanical, Electrical, and Plumbing engineering services globally.
             </p>
             <div className="flex gap-4 mt-2">
-              <a
+              {/* <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
@@ -31,9 +31,9 @@ export default function Footer() {
                 aria-label="LinkedIn"
               >
                 <FaLinkedinIn size={14} />
-              </a>
+              </a> */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/poweronelectrotech/"
                 target="_blank"
                 rel="noreferrer"
                 className="w-9 h-9 rounded-full border border-gold/30 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition-all duration-300"
@@ -42,7 +42,7 @@ export default function Footer() {
                 <FaInstagram size={14} />
               </a>
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/918507894280"
                 target="_blank"
                 rel="noreferrer"
                 className="w-9 h-9 rounded-full border border-gold/30 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition-all duration-300"
@@ -86,7 +86,7 @@ export default function Footer() {
           </div>
 
           {/* Services Quicklist */}
-          <div className="flex flex-col gap-6 mt-5">
+          <div className="flex flex-col gap-6 mt-5" onClick={() => (window.location.href = '/services')}>
             <h4 className="font-serif text-lg text-gold font-medium tracking-wider">
               Core MEP Services
             </h4>
@@ -120,22 +120,33 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div className="flex flex-col gap-6 mt-5">
-            <h4 className="font-serif text-lg text-gold font-medium tracking-wider">Headquarters</h4>
+            <h4 className="font-serif text-lg text-gold font-medium tracking-wider">
+              Headquarters
+            </h4>
+
             <ul className="flex flex-col gap-4 font-sans text-xs text-gray-400 tracking-wide">
+              
+
+              <li className="flex items-center gap-3">
+                <FaPhoneAlt className="text-gold shrink-0" size={14} />
+                <span>+91 8507894280</span>
+              </li>
+
+              <li className="flex items-center gap-3">
+                <FaEnvelope className="text-gold shrink-0" size={14} />
+                <span>info@poweronelectrotech.in</span>
+              </li>
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-gold mt-1 shrink-0" size={14} />
                 <span className="leading-relaxed">
-                  100 Architectural Plaza, Suite 500<br />
-                  London, EC1A 1BB, United Kingdom
+                  A-36/1, Tilpata Karanwas
+                  <br />
+                  Greater Noida, Dadri
+                  <br />
+                  Gautam Buddha Nagar - 201306
+                  <br />
+                  Uttar Pradesh, India
                 </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <FaPhoneAlt className="text-gold shrink-0" size={14} />
-                <span>+44 20 7946 0958</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <FaEnvelope className="text-gold shrink-0" size={14} />
-                <span>contact@aura-mep.com</span>
               </li>
             </ul>
           </div>

@@ -11,6 +11,7 @@ import {
 
 export default function Contact() {
   const container = useRef(null);
+  const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -96,14 +97,76 @@ export default function Contact() {
 
     return () => ctx.revert();
   }, []);
+  const validateForm = () => {
+    if (!formData.name.trim()) {
+      alert("Please enter your name");
+      return false;
+    }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+    if (formData.name.trim().length < 3) {
+      alert("Name must be at least 3 characters");
+      return false;
+    }
 
-    setSubmitted(true);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    setTimeout(() => {
-      setSubmitted(false);
+    if (!emailRegex.test(formData.email)) {
+      alert("Please enter a valid email address");
+      return false;
+    }
+
+    const cleanedPhone = formData.phone.replace(/\D/g, "");
+
+    if (cleanedPhone.length < 10 || cleanedPhone.length > 15) {
+      alert("Please enter a valid phone number");
+      return false;
+    }
+
+    if (!formData.subject.trim()) {
+      alert("Please enter a subject");
+      return false;
+    }
+
+    if (formData.subject.trim().length < 5) {
+      alert("Subject must be at least 5 characters");
+      return false;
+    }
+
+    if (!formData.message.trim()) {
+      alert("Please enter your message");
+      return false;
+    }
+
+    if (formData.message.trim().length < 10) {
+      alert("Message must be at least 10 characters");
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  if (loading) return; // Prevent double click
+
+  if (!validateForm()) return;
+
+  setLoading(true);
+
+  try {
+    const response = await fetch(
+      process.env.NEXT_PUBLIC_GOOGLE_SHEET_URL,
+      {
+        method: "POST",
+        body: JSON.stringify(formData),
+      }
+    );
+
+    const result = await response.json();
+
+    if (result.success) {
+      setSubmitted(true);
 
       setFormData({
         name: "",
@@ -112,8 +175,18 @@ export default function Contact() {
         subject: "",
         message: "",
       });
-    }, 3000);
-  };
+
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 3000);
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Failed to submit form");
+  } finally {
+    setLoading(false);
+  }
+};
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -182,31 +255,9 @@ export default function Contact() {
                 Engineering Excellence Starts Here
               </h2>
             </div>
-
-            <p className="text-gray-600 leading-relaxed text-base">
-              Connect with our MEP engineering specialists for premium
-              residential, commercial, and infrastructure projects.
-            </p>
-
             {/* INFO LIST */}
             <div className="flex flex-col gap-8">
 
-              {/* ADDRESS */}
-              <div className="flex gap-5">
-                <div className="w-12 h-12 border border-[#C8A45D] flex items-center justify-center text-[#C8A45D]">
-                  <FaMapMarkerAlt />
-                </div>
-
-                <div>
-                  <h4 className="uppercase tracking-[0.2em] text-xs font-semibold mb-2">
-                    Office Address
-                  </h4>
-
-                  <p className="text-gray-600">
-                    100 Architectural Plaza, London
-                  </p>
-                </div>
-              </div>
 
               {/* PHONE */}
               <div className="flex gap-5">
@@ -220,7 +271,7 @@ export default function Contact() {
                   </h4>
 
                   <p className="text-gray-600">
-                    +44 20 7946 0958
+                    +91 8507894280
                   </p>
                 </div>
               </div>
@@ -237,7 +288,28 @@ export default function Contact() {
                   </h4>
 
                   <p className="text-gray-600">
-                    contact@aura-mep.com
+                    info@poweronelectrotech.in
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-5">
+                <div className="w-12 h-12 border border-[#C8A45D] flex items-center justify-center text-[#C8A45D]">
+                  <FaMapMarkerAlt />
+                </div>
+
+                <div>
+                  <h4 className="uppercase tracking-[0.2em] text-xs font-semibold mb-2">
+                    Office Address
+                  </h4>
+
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    A-36/1, Tilpata Karanwas
+                    <br />
+                    Greater Noida, Dadri
+                    <br />
+                    Gautam Buddha Nagar - 201306
+                    <br />
+                    Uttar Pradesh, India
                   </p>
                 </div>
               </div>

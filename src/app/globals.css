@@ -197,3 +197,26 @@ html.lenis, html.lenis body {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+
+
+
+
+.project-gallery .swiper-button-next,
+.project-gallery .swiper-button-prev {
+  color: #d4af37;
+  transform: scale(0.8);
+}
+
+.project-gallery .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.project-gallery .swiper-pagination-bullet-active {
+  background: #d4af37;
+}
+
+.project-gallery .swiper-button-next:hover,
+.project-gallery .swiper-button-prev:hover {
+  transform: scale(1);
+}

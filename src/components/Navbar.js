@@ -96,7 +96,7 @@ export default function Navbar() {
           {/* Call-to-action button */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/8507894280"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gold hover:text-gold-dark transition-colors text-4xl"
