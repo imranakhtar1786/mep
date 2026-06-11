@@ -1,7 +1,15 @@
-export const metadata = {
+import { createPageMetadata } from "../seo";
+
+export const metadata = createPageMetadata({
   title: "Privacy Policy",
-  description: "Privacy Policy",
-};
+  description:
+    "Read the POWERON ELECTROTECH privacy policy for details about how inquiry, contact and project information is collected, used and protected.",
+  path: "/privacy-policy",
+  keywords: [
+    "POWERON ELECTROTECH Privacy Policy",
+    "Engineering Website Privacy Policy",
+  ],
+});
 
 export default function PrivacyPolicyPage() {
   return (

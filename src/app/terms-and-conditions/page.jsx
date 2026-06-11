@@ -1,7 +1,15 @@
-export const metadata = {
+import { createPageMetadata } from "../seo";
+
+export const metadata = createPageMetadata({
   title: "Terms & Conditions",
-  description: "Terms and Conditions",
-};
+  description:
+    "Review the POWERON ELECTROTECH terms and conditions for website usage, service information, quotations, intellectual property and liability details.",
+  path: "/terms-and-conditions",
+  keywords: [
+    "POWERON ELECTROTECH Terms",
+    "Engineering Website Terms and Conditions",
+  ],
+});
 
 export default function TermsAndConditionsPage() {
   return (
