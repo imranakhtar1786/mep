@@ -21,7 +21,8 @@ export default function Home() {
   const containerRef = useRef(null);
   const heroTextRef = useRef(null);
   const statsRef = useRef(null);
-   const router = useRouter();
+  const router = useRouter();
+
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -176,90 +177,309 @@ export default function Home() {
       location: "Chennai, India",
       image: "/p1.jpeg", // Placeholder for engineering/construction project image
       icon: <FaBuilding className="text-white text-lg" />,
-    }
+    },
+    {
+      title: "Central Footwear Training Institute (CFTI)",
+      category: "Electrical Engineering",
+      location: "Guindy, Chennai - 600032",
+      image: "/cfti1.jpeg",
+      icon: <FaBuilding className="text-white text-lg" />,
+    },
   ];
 
   return (
-    <div className="relative overflow-hidden w-full bg-white" ref={containerRef}>
+    <div
+      className="relative overflow-hidden w-full bg-[linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url('https://i.pinimg.com/736x/f4/30/50/f430503b03ce88471ba04b47e89e8c29.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top"
+      ref={containerRef}
+    >
 
       {/* 1. HERO SECTION */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-center overflow-hidden">
 
-        {/* Background Parallax Visual */}
+        {/* Background */}
         <motion.div
           style={{ y: heroBgY, opacity: heroOpacity }}
-          className="absolute inset-0 z-0 bg-cover bg-center"
+          className="absolute inset-0 z-0"
         >
-          {/* Background Image */}
+
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center scale-110"
             style={{
-              backgroundImage:
-                "url('/banner.png')",
+              backgroundImage: "url('/bb1.webp')",
             }}
           />
 
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/50 mix-blend-multiply" />
 
-          {/* Bottom Black Shadow Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/55" />
+
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/10 to-transparent" />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
+
         </motion.div>
 
-        {/* Fine Architectural Grid Lines */}
-        <div className="absolute inset-0 z-1 pointer-events-none opacity-10">
-          <div className="max-w-7xl mx-auto h-full w-full grid grid-cols-4 px-6 md:px-12">
-            <div className="border-r border-white h-full"></div>
-            <div className="border-r border-white h-full"></div>
-            <div className="border-r border-white h-full"></div>
-            <div className="h-full"></div>
+
+
+
+        {/* Architectural Grid */}
+        <div className="absolute inset-0 z-1 opacity-[0.08] pointer-events-none">
+
+          <div className="max-w-7xl mx-auto h-full grid grid-cols-4 px-6 md:px-12">
+
+            <div className="border-r border-white" />
+            <div className="border-r border-white" />
+            <div className="border-r border-white" />
+            <div />
+
           </div>
+
         </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full text-white mt-16" ref={heroTextRef}>
-          <div className="max-w-3xl">
 
-            <h1 className="text-4xl md:text-7xl font-light tracking-wide leading-tight mb-8">
-              <span className="char-fade block">Engineering</span>
-              <span className="char-fade block text-gold italic">Intelligent</span>
-              <span className="char-fade block">Infrastructure</span>
-            </h1>
 
-            <motion.div
+
+
+        {/* Content */}
+        <div
+          ref={heroTextRef}
+          className="
+          relative
+          z-10
+          max-w-7xl
+          mx-auto
+          px-6
+          md:px-12
+          w-full
+          pt-[10vh]
+          "
+        >
+
+
+          <div className="max-w-4xl">
+
+
+
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-6"
+              transition={{ delay: 0.3 }}
+              className="
+              text-[#C8A45D]
+              text-xs
+              md:text-sm
+              tracking-[0.45em]
+              uppercase
+              mb-6
+              "
             >
-              <Link
-                href="/services"
-                className="btn-gold px-8 py-4 bg-gold text-matte-black font-sans text-xs font-bold tracking-[0.2em] uppercase transition-all hover:bg-gold-dark hover:border-gold-dark text-center"
-              >
-                Our Services
-              </Link>
-              <Link
-                href="/projects"
-                className="px-8 py-4 border border-white text-white font-sans text-xs font-bold tracking-[0.2em] uppercase transition-all hover:bg-white hover:text-matte-black text-center"
-              >
-                View Portfolio
-              </Link>
+              POWERON ELECTROTECH SOLUTIONS
+            </motion.p>
+
+
+
+
+
+            <h1
+              className="
+              text-5xl
+              sm:text-6xl
+              md:text-6xl
+              font-light
+              leading-[1.05]
+              tracking-wide
+              text-white
+              "
+            >
+
+              <span className="block char-fade">
+                Powering
+              </span>
+
+
+              <span className="
+                    block
+                    char-fade
+                    text-[#C8A45D]
+                    italic
+                    ">
+                Electrical Excellence
+              </span>
+
+
+            </h1>
+
+
+
+
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="
+                mt-7
+                max-w-xl
+                text-gray-300
+                text-sm
+                md:text-base
+                leading-relaxed
+                font-light
+                "
+            >
+
+              Delivering advanced MEP engineering, electrical systems,
+              power distribution, automation and infrastructure solutions
+              for modern commercial and industrial projects.
+
+            </motion.p>
+
+
+
+
+
+
+
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="
+        mt-10
+        flex
+        flex-wrap
+        gap-8
+        border-l
+        border-[#C8A45D]
+        pl-6
+        "
+            >
+
+
+              <div>
+                <h3 className="text-3xl text-white font-light">
+                  MEP
+                </h3>
+
+                <p className="text-[10px] tracking-[0.3em] text-gray-400 uppercase">
+                  Engineering
+                </p>
+              </div>
+
+
+
+              <div>
+                <h3 className="text-3xl text-white font-light">
+                  Power
+                </h3>
+
+                <p className="text-[10px] tracking-[0.3em] text-gray-400 uppercase">
+                  Solutions
+                </p>
+              </div>
+
+
+
+              <div>
+                <h3 className="text-3xl text-white font-light">
+                  24/7
+                </h3>
+
+                <p className="text-[10px] tracking-[0.3em] text-gray-400 uppercase">
+                  Support
+                </p>
+              </div>
+
+
             </motion.div>
+
+
+
+
+            {/* Explore */}
+            <Link href="/projects">
+
+              <motion.div
+                animate={{ x: [0, 15, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 2
+                }}
+
+                className="
+      mt-8
+      flex
+      items-center
+      gap-5
+      text-[#C8A45D]
+      text-[10px]
+      uppercase
+      tracking-[0.4em]
+      cursor-pointer
+      w-fit
+    "
+              >
+
+                Explore Solutions
+
+                <span className="w-16 h-[1px] bg-[#C8A45D]" />
+
+              </motion.div>
+
+            </Link>
+
+
           </div>
+
+
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 hidden md:block">
+
+
+
+
+        {/* Scroll */}
+        <div className="
+  absolute
+  bottom-10
+  left-1/2
+  -translate-x-1/2
+  hidden
+  md:block
+  ">
+
           <motion.div
             animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-            className="flex flex-col items-center gap-2 cursor-pointer"
-            onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
+            transition={{
+              repeat: Infinity,
+              duration: 1.5
+            }}
+
+            className="flex flex-col items-center gap-3"
           >
-            <span className="font-sans text-[9px] tracking-[0.25em] text-gray-400 uppercase">Scroll Down</span>
-            <div className="w-[1px] h-10 bg-gold/50"></div>
+
+            <span className="
+      text-[9px]
+      uppercase
+      tracking-[0.4em]
+      text-gray-400
+      ">
+              Scroll
+            </span>
+
+
+            <div className="
+      h-12
+      w-[1px]
+      bg-[#C8A45D]/70
+      " />
+
           </motion.div>
+
         </div>
+
+
       </section>
 
       {/* 2. STATS SECTION */}
@@ -281,8 +501,10 @@ export default function Home() {
             {stats.map((stat, index) => (
               <div
                 key={stat.label}
-                className={`flex flex-col items-center text-center p-4 ${index > 0 ? "pt-8 md:pt-4" : ""
-                  }`}
+                className={`flex flex-col items-center text-center p-4 
+        ${index > 0 ? "pt-8 md:pt-4" : ""}
+        ${index === stats.length - 1 ? "border-b border-white/50 md:border-b-0" : ""}
+      `}
               >
 
                 <div className="font-serif text-3xl md:text-5xl text-[#C8A45D] font-light mb-3 flex items-center">
@@ -311,7 +533,7 @@ export default function Home() {
       </section>
 
       {/* 3. SERVICES PREVIEW SECTION */}
-      <section className="bg-warm-white py-24 md:py-32 relative">
+      <section className=" py-20 md:py-20 relative">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
 
           {/* Section Header */}
@@ -335,46 +557,64 @@ export default function Home() {
                 whileHover={{ y: -10 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 key={service.title}
-                className="glass-card flex flex-col justify-between overflow-hidden relative group h-[480px]"
+                className="glass-card flex flex-col justify-between overflow-hidden relative group h-[480px] rounded-3xl border border-black/10 bg-white/90 backdrop-blur-sm shadow-[0_30px_90px_rgba(0,0,0,0.25)] hover:shadow-[0_45px_120px_rgba(0,0,0,0.4)] hover:-translate-y-3 transition-all duration-500"
               >
-                {/* Visual Image Background on Hover */}
-                <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out">
+
+                {/* Always Show Background Image */}
+                <div className="absolute inset-0 z-0">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover grayscale transition-transform duration-700 ease-in-out group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-in-out "
                   />
-                  <div className="absolute inset-0 bg-matte-black/85" />
+
+                  <div className="absolute inset-0 bg-matte-black/75" />
                 </div>
 
+
+                {/* Content */}
                 <div className="p-8 relative z-10 flex flex-col gap-6 h-full justify-between">
+
                   <div className="flex flex-col gap-6">
-                    <div className="w-12 h-12 rounded-none fine-border-gold flex items-center justify-center group-hover:bg-white transition-colors duration-500">
-                      <span className="group-hover:text-matte-black transition-colors duration-500">
+
+                    {/* Icon */}
+                    <div className="w-12 h-12 rounded-none fine-border-gold flex items-center justify-center bg-white/10 group-hover:bg-white transition-colors duration-500">
+                      <span className="text-white transition-colors duration-500">
                         {service.icon}
                       </span>
                     </div>
 
-                    <h3 className="text-2xl font-light tracking-wide text-matte-black group-hover:text-white transition-colors duration-300">
+
+                    {/* Title */}
+                    <h3 className="text-2xl font-light tracking-wide text-white">
                       {service.title}
                     </h3>
 
-                    <p className="font-sans text-sm font-light text-black-500 leading-relaxed group-hover:text-gray-400 transition-colors duration-300">
+
+                    {/* Description */}
+                    <p className="font-sans text-sm font-light leading-relaxed text-gray-300">
                       {service.desc}
                     </p>
+
                   </div>
 
+
+                  {/* Button */}
                   <Link
                     href="/services"
-                    className="flex items-center gap-3 font-sans text-[10px] font-bold tracking-[0.2em] uppercase text-gold group-hover:text-white transition-colors duration-300 w-fit"
+                    className="flex items-center gap-3 font-sans text-[10px] font-bold tracking-[0.2em] uppercase text-gold hover:text-white transition-colors duration-300 w-fit"
                   >
-                    Explore System <FiArrowRight className="text-xs transition-transform group-hover:translate-x-2" />
+                    Explore System
+
+                    <FiArrowRight className="text-xs transition-transform group-hover:translate-x-2" />
+
                   </Link>
+
                 </div>
+
               </motion.div>
             ))}
           </div>
-
           <div className="mt-12 text-center scroll-reveal">
             <Link
               href="/services"
@@ -388,7 +628,7 @@ export default function Home() {
       </section>
 
       {/* 4. FEATURED PROJECTS */}
-      <section className="bg-white py-24 md:py-32 border-t border-gray-100">
+      <section className=" py-14 md:py-12 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
 
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 scroll-reveal">
@@ -420,38 +660,72 @@ export default function Home() {
               <div
                 onClick={() => router.push("/projects")}
                 key={project.title}
-                className="scroll-reveal relative h-[500px] group overflow-hidden cursor-pointer"
+                className="scroll-reveal relative h-[500px] group overflow-hidden cursor-pointer rounded-3xl border border-black/10 shadow-[0_25px_80px_rgba(0,0,0,0.25)] hover:shadow-[0_35px_100px_rgba(0,0,0,0.4)] transition-all duration-500"
               >
+
                 {/* Image */}
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover grayscale transition-all duration-700 ease-in-out group-hover:scale-110 group-hover:grayscale-0"
+                  className="w-full h-full object-cover  transition-all duration-700 ease-in-out group-hover:scale-110 "
                 />
 
-                {/* Overlays */}
-                <div className="absolute inset-0 bg-gradient-to-t from-matte-black via-matte-black/30 to-transparent opacity-85 group-hover:opacity-90 transition-opacity duration-500" />
 
-                {/* Thin gold structural border */}
-                <div className="absolute inset-4 border border-gold/15 pointer-events-none group-hover:border-gold/45 transition-colors duration-500" />
+                {/* Dark Premium Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500" />
 
-                {/* Project Info */}
-                <div className="absolute bottom-8 left-8 right-8 z-10 flex justify-between items-end">
+
+                {/* Gold Frame */}
+                <div className="absolute inset-5 rounded-2xl border border-[#C8A45D]/30 group-hover:border-[#C8A45D]/80 transition-all duration-500" />
+
+
+                {/* Bottom Glass Info */}
+                <div className="absolute bottom-6 left-6 right-6 z-10 
+                  bg-black/20 backdrop-blur-md rounded-2xl p-5 
+                  border border-white/10
+                  flex justify-between items-end
+                  group-hover:bg-black/40
+                  transition-all duration-500"
+                >
+
                   <div className="flex flex-col gap-2">
-                    <span className="font-sans text-[9px] font-semibold tracking-[0.2em] uppercase text-gold">
+
+                    <span className="font-sans text-[9px] font-semibold tracking-[0.25em] uppercase text-[#C8A45D]">
                       {project.category}
                     </span>
+
+
                     <h3 className="text-2xl font-light text-white tracking-wide">
                       {project.title}
                     </h3>
-                    <span className="font-sans text-[10px] text-gray-400 font-light tracking-wide">
+
+
+                    <span className="font-sans text-[10px] text-gray-300 font-light tracking-wide">
                       {project.location}
                     </span>
+
                   </div>
-                  <div className="w-10 h-10 rounded-full bg-gold/10 backdrop-blur-sm border border-gold/30 flex items-center justify-center text-white group-hover:bg-gold group-hover:text-matte-black transition-all duration-500">
+
+
+                  {/* Arrow Button */}
+                  <div className="
+                    w-12 h-12 rounded-full
+                    bg-[#C8A45D]/20
+                    backdrop-blur-md
+                    border border-[#C8A45D]/40
+                    flex items-center justify-center
+                    text-white
+                    group-hover:bg-[#C8A45D]
+                    group-hover:text-black
+                    group-hover:rotate-45
+                    transition-all duration-500
+                  ">
                     {project.icon}
                   </div>
+
+
                 </div>
+
               </div>
             ))}
           </div>
@@ -460,7 +734,7 @@ export default function Home() {
       </section>
 
       {/* 5. CTA SECTION */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-[#f8f5ef] border-t border-[#C8A45D]/20">
+      <section className="relative mt-10 py-24 md:py-32 overflow-hidden bg-[#f8f5ef] border-t border-[#C8A45D]/20">
 
         {/* Luxury Grid Background */}
         <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(rgba(200,164,93,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(200,164,93,0.35)_1px,transparent_1px)] bg-[size:100px_100px]" />
@@ -495,7 +769,7 @@ export default function Home() {
             </Link>
 
             <a
-              href="https://wa.me/8507894280"
+              href="https://wa.me/72568 15100"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-4 border border-black/15 text-black text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 hover:bg-black hover:text-white flex items-center justify-center gap-2"

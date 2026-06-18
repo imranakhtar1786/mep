@@ -149,7 +149,7 @@ export default function About() {
   return (
     <div
       ref={pageRef}
-      className="bg-white text-black overflow-hidden"
+      className="bg-[linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url('https://i.pinimg.com/736x/f4/30/50/f430503b03ce88471ba04b47e89e8c29.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top text-black overflow-hidden"
     >
 
       {/* HERO */}
@@ -218,24 +218,25 @@ export default function About() {
           {/* IMAGE */}
           <motion.div
             whileHover={{ scale: 1.03 }}
-            className="about-reveal relative overflow-hidden"
+            className="about-reveal relative overflow-hidden rounded-3xl shadow-[0_25px_70px_rgba(0,0,0,0.25)]"
           >
 
             <img
               src="/elecrical.png"
               alt="About"
-              className="w-full h-[500px] object-cover"
+              className="w-full h-[500px] object-cover rounded-3xl"
             />
 
-            <div className="absolute inset-0 bg-black/10"></div>
+            <div className="absolute inset-0 bg-black/10 rounded-3xl"></div>
 
-            <div className="absolute inset-5 border border-[#C8A45D]/40"></div>
+            <div className="absolute inset-5 border border-[#C8A45D]/40 rounded-2xl"></div>
+
           </motion.div>
         </div>
       </section>
 
       {/* FEATURES */}
-      <section className="bg-[#faf7f2] py-20 md:py-28 overflow-hidden">
+      <section className="pt-5 overflow-hidden">
 
         <div className="max-w-7xl mx-auto px-6 md:px-12">
 
@@ -252,12 +253,12 @@ export default function About() {
           </div>
 
           {/* GRID */}
-          <div className="features-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="features-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
 
             {features.map((item, index) => (
               <div
                 key={index}
-                className="feature-card opacity-0 bg-white border border-black/5 p-8 hover:border-[#C8A45D]/40 hover:-translate-y-2 transition-all duration-500 shadow-sm"
+                className="feature-card opacity-0 bg-white/95 backdrop-blur-sm border border-black/5 p-8 rounded-3xl hover:border-[#C8A45D]/40 hover:-translate-y-2 transition-all duration-500 shadow-[0_20px_60px_rgba(0,0,0,0.15)]"
               >
 
                 <div className="mb-5">
@@ -278,7 +279,7 @@ export default function About() {
       </section>
 
       {/* DIRECTORS */}
-      <section className="director-section max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-32">
+      <section className="director-section max-w-7xl mx-auto px-6 mb-10">
 
         <div className="text-center mb-20 about-reveal">
 
@@ -294,7 +295,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
           {/* DIRECTOR 1 */}
-           <div className="director-card bg-white border border-black/10 p-10">
+          <div className="director-card bg-white border border-black/10 p-10 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
 
             <div className="mb-6 overflow-hidden">
               <img
@@ -317,8 +318,7 @@ export default function About() {
               and integrated automation solutions for modern developments.
             </p>
           </div>
-          <div className="director-card bg-white border border-black/10 p-10">
-
+          <div className="director-card bg-white border border-black/10 p-10 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
             <div className="mb-6 overflow-hidden">
               <img
                 src="/a.jpeg"
@@ -342,7 +342,7 @@ export default function About() {
           </div>
 
           {/* DIRECTOR 2 */}
-         
+
 
         </div>
       </section>

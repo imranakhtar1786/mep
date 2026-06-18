@@ -20,7 +20,7 @@ export default function Navbar() {
         setScrolled(false);
       }
     };
-    
+
     // Initial check
     handleScroll();
 
@@ -44,25 +44,27 @@ export default function Navbar() {
   // Determine if the navbar should be white or transparent initially
   // Home page starts transparent. Others can have a clean thin border/white background.
   const isHomePage = pathname === "/";
-  const navbarBg = scrolled 
-    ? "bg-white/80 backdrop-blur-md border-b border-gold/20 shadow-sm py-4" 
-    : isHomePage 
-      ? "bg-transparent py-6 border-b border-transparent" 
-      : "bg-white border-b border-gold/10 py-6";
+  const navbarBg = scrolled
+    ? "bg-white/80 backdrop-blur-md border-b border-gold/20 shadow-xl py-4 bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('https://i.pinimg.com/736x/f4/30/50/f430503b03ce88471ba04b47e89e8c29.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top"
+    : isHomePage
+      ? "bg-transparent py-6 border-b border-transparent"
+      : "bg-white border-b border-gold/10 py-6 bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('https://i.pinimg.com/736x/f4/30/50/f430503b03ce88471ba04b47e89e8c29.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top";
 
-  const textColor = scrolled 
-    ? "text-matte-black" 
-    : isHomePage 
-      ? "text-white" 
+  const textColor = scrolled
+    ? "text-matte-black "
+    : isHomePage
+      ? "text-white"
       : "text-matte-black";
 
   const goldAccent = "text-gold";
 
   return (
     <>
-      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${navbarBg}`}>
+      <header
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${navbarBg} `}
+      >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-          
+
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <img src="/icon1.png" alt="Logo" className="w-10" />
@@ -76,9 +78,8 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`relative font-sans text-[14px] font-semibold tracking-[0.2em] uppercase transition-colors duration-300 hover:text-gold ${
-                    isActive ? "text-gold" : textColor
-                  }`}
+                  className={`relative font-sans text-[14px] font-semibold tracking-[0.2em] uppercase transition-colors duration-300 hover:text-gold ${isActive ? "text-gold" : textColor
+                    }`}
                 >
                   {link.name}
                   {isActive && (
@@ -96,7 +97,7 @@ export default function Navbar() {
           {/* Call-to-action button */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="https://wa.me/8507894280"
+              href="https://wa.me/7256815100"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gold hover:text-gold-dark transition-colors text-4xl"
@@ -106,13 +107,12 @@ export default function Navbar() {
             </a>
             <Link
               href="/contact"
-              className={`font-sans text-xs font-semibold tracking-[0.15em] uppercase px-5 py-2.5 rounded-none border transition-all duration-500 ${
-                scrolled
+              className={`font-sans text-xs font-semibold tracking-[0.15em] uppercase px-5 py-2.5 rounded-none border transition-all duration-500 ${scrolled
                   ? "border-matte-black text-matte-black hover:bg-matte-black hover:text-white"
                   : isHomePage
                     ? "border-white text-white hover:bg-white hover:text-matte-black"
                     : "border-matte-black text-matte-black hover:bg-matte-black hover:text-white"
-              }`}
+                }`}
             >
               Inquire Now
             </Link>
@@ -139,7 +139,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
             transition={{ type: "tween", duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-40 bg-white flex flex-col justify-between p-8 pt-28 md:hidden"
+            className="fixed inset-0 z-40 flex flex-col justify-between p-8 pt-28 md:hidden bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('https://i.pinimg.com/736x/f4/30/50/f430503b03ce88471ba04b47e89e8c29.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top"
           >
             {/* Fine architectural guidelines background lines */}
             <div className="absolute inset-0 grid grid-cols-3 pointer-events-none opacity-5">
@@ -158,9 +158,8 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className={`font-serif text-3xl font-light tracking-wide hover:text-gold block transition-colors duration-300 ${
-                      pathname === link.href ? "text-gold" : "text-matte-black"
-                    }`}
+                    className={`font-serif text-3xl font-light tracking-wide hover:text-gold block transition-colors duration-300 ${pathname === link.href ? "text-gold" : "text-matte-black"
+                      }`}
                   >
                     {link.name}
                   </Link>
@@ -174,7 +173,7 @@ export default function Navbar() {
               </p>
               <div className="flex gap-4">
                 <a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/7256815100"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full py-3 bg-green-500 hover:bg-green-600 text-white font-sans text-xs font-semibold tracking-widest uppercase transition-colors"

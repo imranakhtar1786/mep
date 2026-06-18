@@ -52,6 +52,31 @@ export default function Projects() {
         "Power Distribution",
       ],
     },
+    {
+      title: "CFTI - Auditorium Block & Additional Workshop Building",
+      category: "commercial",
+      displayCategory: "Electrical Engineering",
+      location: "Guindy, Chennai, India",
+      images: [
+        "/cfti1.jpeg",
+        "/cfti2.jpeg",
+        "/cfti3.jpeg",
+        "/cfti4.jpeg",
+        "/cfti5.jpeg",
+        "/cfti6.jpeg",
+        "/cfti7.jpeg",
+      ],
+      icon: <FaBuilding className="text-white text-lg" />,
+      systems: [
+        "E&M Components",
+        "Electrical Engineering",
+        "E&M Inventories & Drawings",
+        "Power Distribution",
+        "Lighting Layout",
+        "Electrical Installation",
+        "Handing Over Documents",
+      ],
+    },
   ];
 
   const filteredProjects =
@@ -61,7 +86,7 @@ export default function Projects() {
 
   return (
     <>
-      <div className="bg-white text-matte-black pt-18 md:pt-16 min-h-screen">
+      <div className="bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('https://i.pinimg.com/736x/f4/30/50/f430503b03ce88471ba04b47e89e8c29.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top text-matte-black pt-18 md:pt-16 min-h-screen">
 
         {/* HEADER */}
         <section className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20">
@@ -118,13 +143,13 @@ export default function Projects() {
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                   key={project.title}
-                  className="relative h-[480px] group overflow-hidden cursor-pointer bg-soft-gray border border-gray-100"
+                  className="relative h-[480px] group overflow-hidden cursor-pointer bg-soft-gray border border-gray-100 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)] hover:shadow-[0_30px_80px_rgba(0,0,0,0.35)] transition-all duration-500"
                 >
                   {/* IMAGE */}
                   <img
                     src={project.images?.[0]}
                     alt={project.title}
-                    className="w-full h-full object-cover grayscale transition-all duration-700 ease-in-out group-hover:scale-110 group-hover:grayscale-0"
+                    className="w-full h-full object-cover rounded-2xl transition-all duration-700 ease-in-out group-hover:scale-110"
                   />
 
                   {/* OVERLAYS */}
@@ -145,7 +170,7 @@ export default function Projects() {
                   <div className="absolute bottom-8 left-8 right-8 z-10 flex flex-col gap-4">
 
                     <div className="flex flex-col gap-1">
-                      <span className="font-sans text-[8px] font-semibold tracking-[0.25em] uppercase text-gold">
+                      <span className="font-sans text-[10px] font-semibold tracking-[0.25em] uppercase text-gold">
                         {project.displayCategory}
                       </span>
 
@@ -153,7 +178,7 @@ export default function Projects() {
                         {project.title}
                       </h2>
 
-                      <span className="font-sans text-[10px] text-gray-300 font-light tracking-wide">
+                      <span className="font-sans text-[12px] text-gray-100 font-light tracking-wide">
                         {project.location}
                       </span>
                     </div>
