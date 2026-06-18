@@ -45,10 +45,10 @@ export default function Navbar() {
   // Home page starts transparent. Others can have a clean thin border/white background.
   const isHomePage = pathname === "/";
   const navbarBg = scrolled
-    ? "bg-white/80 backdrop-blur-md border-b border-gold/20 shadow-xl py-4 bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('https://i.pinimg.com/736x/f4/30/50/f430503b03ce88471ba04b47e89e8c29.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top"
+    ? "bg-white/80 backdrop-blur-md border-b border-gold/20 shadow-xl py-4 bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('/bg.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top"
     : isHomePage
       ? "bg-transparent py-6 border-b border-transparent"
-      : "bg-white border-b border-gold/10 py-6 bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('https://i.pinimg.com/736x/f4/30/50/f430503b03ce88471ba04b47e89e8c29.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top";
+      : "bg-white border-b border-gold/10 py-6 bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('/bg.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top";
 
   const textColor = scrolled
     ? "text-matte-black "
@@ -139,7 +139,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
             transition={{ type: "tween", duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-40 flex flex-col justify-between p-8 pt-28 md:hidden bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('https://i.pinimg.com/736x/f4/30/50/f430503b03ce88471ba04b47e89e8c29.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top"
+            className="fixed inset-0 z-40 flex flex-col justify-between p-8 pt-28 md:hidden bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('/bg.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top"
           >
             {/* Fine architectural guidelines background lines */}
             <div className="absolute inset-0 grid grid-cols-3 pointer-events-none opacity-5">

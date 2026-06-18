@@ -200,7 +200,7 @@ export default function Contact() {
   return (
     <div
       ref={container}
-      className="bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('https://i.pinimg.com/736x/f4/30/50/f430503b03ce88471ba04b47e89e8c29.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top text-black min-h-screen overflow-hidden"
+      className="bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('/bg.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top text-black min-h-screen overflow-hidden"
     >
 
       {/* HERO */}

@@ -189,8 +189,8 @@ export default function Home() {
 
   return (
     <div
-      className="relative overflow-hidden w-full bg-[linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url('https://i.pinimg.com/736x/f4/30/50/f430503b03ce88471ba04b47e89e8c29.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top"
-      ref={containerRef}
+    ref={containerRef}
+    className="relative overflow-hidden w-full bg-[linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url('/bg.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top"
     >
 
       {/* 1. HERO SECTION */}
@@ -736,25 +736,35 @@ export default function Home() {
       {/* 5. CTA SECTION */}
       <section className="relative mt-10 py-24 md:py-32 overflow-hidden bg-[#f8f5ef] border-t border-[#C8A45D]/20">
 
-        {/* Luxury Grid Background */}
-        <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(rgba(200,164,93,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(200,164,93,0.35)_1px,transparent_1px)] bg-[size:100px_100px]" />
+        {/* Background Video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+        >
+          <source src="/large.mp4" type="video/mp4" />
+        </video>
 
-        {/* Soft Gradient Glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#C8A45D]/10 blur-3xl rounded-full" />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/50" />
 
-        <div className="max-w-5xl mx-auto px-6 md:px-12 text-center relative z-10 flex flex-col items-center gap-8 scroll-reveal">
+        {/* Content */}
+        <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12 text-center flex flex-col items-center gap-8 scroll-reveal">
 
           <p className="text-[#C8A45D] text-xs font-semibold tracking-[0.3em] uppercase">
             Powering Modern Infrastructure
           </p>
 
-          <h2 className="text-4xl md:text-6xl font-light tracking-wide leading-tight max-w-3xl text-black">
+          <h2 className="text-4xl md:text-6xl font-light tracking-wide leading-tight max-w-3xl text-white">
             Building Smart MEP Solutions For Tomorrow
           </h2>
 
           <div className="w-16 h-[1px] bg-[#C8A45D]" />
 
-          <p className="text-md font-light text-black-600 leading-relaxed max-w-xl">
+          <p className="text-md font-light text-white/80 leading-relaxed max-w-xl">
             From electrical systems to HVAC, plumbing, fire safety, and automation —
             we deliver integrated engineering solutions with precision and reliability.
           </p>
@@ -769,16 +779,18 @@ export default function Home() {
             </Link>
 
             <a
-              href="https://wa.me/72568 15100"
+              href="https://wa.me/7256815100"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-10 py-4 border border-black/15 text-black text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 hover:bg-black hover:text-white flex items-center justify-center gap-2"
+              className="px-10 py-4 border border-white/30 text-white text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 hover:bg-white hover:text-black"
             >
               WhatsApp Us
             </a>
 
           </div>
+
         </div>
+
       </section>
     </div>
   );
