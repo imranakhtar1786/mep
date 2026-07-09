@@ -86,7 +86,10 @@ export default function Footer() {
           </div>
 
           {/* Services Quicklist */}
-          <div className="flex flex-col gap-6 mt-5" onClick={() => (window.location.href = '/services')}>
+          <div
+            className="flex flex-col gap-6 mt-5"
+            onClick={() => (window.location.href = "/services")}
+          >
             <h4 className="font-serif text-lg text-gold font-medium tracking-wider">
               Core MEP Services
             </h4>
@@ -105,15 +108,19 @@ export default function Footer() {
               </li>
 
               <li className="hover:text-white transition-colors cursor-pointer">
-                Fire Fighting
+                Fire Fighting & Fire Alarm Systems
               </li>
 
               <li className="hover:text-white transition-colors cursor-pointer">
-                Solar Energy
+                CCTV, Access Control & ELV Systems
               </li>
 
               <li className="hover:text-white transition-colors cursor-pointer">
-                Automation
+                MEP Design & Consultancy
+              </li>
+
+              <li className="hover:text-white transition-colors cursor-pointer">
+                Solar Energy & Industrial Automation
               </li>
             </ul>
           </div>
@@ -125,7 +132,7 @@ export default function Footer() {
             </h4>
 
             <ul className="flex flex-col gap-4 font-sans text-xs text-gray-400 tracking-wide">
-              
+
 
               <li className="flex items-center gap-3">
                 <FaPhoneAlt className="text-gold shrink-0" size={14} />

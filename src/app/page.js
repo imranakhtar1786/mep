@@ -14,6 +14,12 @@ import {
   FiDroplet,
   FiShield,
   FiSun,
+  FiBell,
+  FiCamera,
+  FiLock,
+  FiWifi,
+  FiMonitor,
+  FiPenTool,
 } from "react-icons/fi";
 import { useRouter } from "next/navigation";
 
@@ -150,7 +156,6 @@ export default function Home() {
       link: "/services/fire-fighting",
       icon: <FiShield className="text-xl" />,
     },
-
     {
       title: "Solar Energy Solutions",
       desc: "Renewable solar infrastructure including rooftop solar systems, energy optimization, and sustainable power integration for smart facilities.",
@@ -167,6 +172,46 @@ export default function Home() {
         "/auto.jpg",
       link: "/services/automation",
       icon: <FiCpu className="text-xl" />,
+    },
+
+    {
+      title: "CCTV Systems",
+      desc: "Advanced IP and HD CCTV surveillance solutions with remote monitoring, video analytics, recording, and security management.",
+      image: "/cctv.jpg",
+      link: "/services/cctv",
+      icon: <FiCamera className="text-xl" />,
+    },
+
+    {
+      title: "Access Control Systems",
+      desc: "Secure biometric, RFID, facial recognition, and smart card access control systems for enhanced facility security.",
+      image: "/acess.jpg",
+      link: "/services/access-control",
+      icon: <FiLock className="text-xl" />,
+    },
+
+    {
+      title: "LAN & Structured Cabling",
+      desc: "High-speed structured cabling, fiber optic networks, LAN infrastructure, server racks, and enterprise connectivity solutions.",
+      image: "/lan.jpg",
+      link: "/services/lan",
+      icon: <FiWifi className="text-xl" />,
+    },
+
+    {
+      title: "AV Systems",
+      desc: "Professional audio-visual solutions including conference room AV, PA systems, digital signage, and multimedia integration.",
+      image: "/av.avif",
+      link: "/services/av",
+      icon: <FiMonitor className="text-xl" />,
+    },
+
+    {
+      title: "MEP Design",
+      desc: "Complete MEP engineering design, BIM coordination, shop drawings, load calculations, BOQ preparation, and project consultancy.",
+      image: "/mep.jpg",
+      link: "/services/mep-design",
+      icon: <FiPenTool className="text-xl" />,
     },
   ];
 
@@ -189,8 +234,8 @@ export default function Home() {
 
   return (
     <div
-    ref={containerRef}
-    className="relative overflow-hidden w-full bg-[linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url('/bg.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top"
+      ref={containerRef}
+      className="relative overflow-hidden w-full bg-[linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url('/bg.jpg')] bg-[length:300px_auto] bg-repeat bg-right-top"
     >
 
       {/* 1. HERO SECTION */}
@@ -578,7 +623,7 @@ export default function Home() {
                   <div className="flex flex-col gap-6">
 
                     {/* Icon */}
-                    <div className="w-12 h-12 rounded-none fine-border-gold flex items-center justify-center bg-white/10 group-hover:bg-white transition-colors duration-500">
+                    <div className="w-12 h-12 rounded-none fine-border-gold flex items-center justify-center bg-white/10 transition-colors duration-500">
                       <span className="text-white transition-colors duration-500">
                         {service.icon}
                       </span>

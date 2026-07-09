@@ -56,6 +56,46 @@ export default function MainSections() {
       image: "/auto.jpg",
       link: "/services/automation",
     },
+
+    {
+      category: "CCTV Systems",
+      title: "Smart Security Monitoring",
+      desc: "High-definition IP CCTV surveillance systems with remote monitoring, video recording, analytics, and 24/7 security management.",
+      image: "/cctv.jpg",
+      link: "/services/cctv",
+    },
+
+    {
+      category: "Access Control Systems",
+      title: "Secure Access Management",
+      desc: "Biometric, RFID, smart card, and facial recognition access control solutions for secure and efficient facility management.",
+      image: "/acess.jpg",
+      link: "/services/access-control",
+    },
+
+    {
+      category: "LAN & Structured Cabling",
+      title: "Enterprise Network Infrastructure",
+      desc: "Structured cabling, fiber optic networks, server racks, LAN installation, and high-speed communication infrastructure for commercial buildings.",
+      image: "/lan.jpg",
+      link: "/services/lan",
+    },
+
+    {
+      category: "AV Systems",
+      title: "Professional Audio Visual Solutions",
+      desc: "Integrated audio-visual systems including conference room solutions, PA systems, digital signage, and multimedia installations.",
+      image: "/av.avif",
+      link: "/services/av",
+    },
+
+    {
+      category: "MEP Design",
+      title: "Engineering Design & Consultancy",
+      desc: "Comprehensive MEP design services including BIM coordination, shop drawings, load calculations, BOQ preparation, and engineering consultancy.",
+      image: "/mep.jpg",
+      link: "/services/mep-design",
+    },
   ];
 
   useEffect(() => {
