@@ -3,6 +3,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-cormorant-garamond",
@@ -144,6 +145,7 @@ export default function RootLayout({ children }) {
           </main>
           <Footer />
         </SmoothScroll>
+        <Analytics/>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
