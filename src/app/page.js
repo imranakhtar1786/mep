@@ -230,6 +230,13 @@ export default function Home() {
       image: "/cfti1.jpeg",
       icon: <FaBuilding className="text-white text-lg" />,
     },
+    {
+      title: "Conference Room Electrical Works",
+      category: "Electrical Engineering",
+      location: "Prayagraj, India",
+      image: "/p15.jpeg",
+      icon: <FaBuilding className="text-white text-lg" />,
+    },
   ];
 
   return (

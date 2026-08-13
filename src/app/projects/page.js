@@ -77,6 +77,31 @@ export default function Projects() {
         "Handing Over Documents",
       ],
     },
+
+    {
+      title: "Conference Room Electrical Works",
+      category: "commercial",
+      displayCategory: "Electrical Engineering",
+      location: "Prayagraj, India",
+      images: [
+        "/p15.jpeg",
+        "/p16.jpeg",
+        "/p17.jpeg",
+        "/p18.jpeg",
+        "/p19.jpeg",
+      ],
+      icon: <FaBuilding className="text-white text-lg" />,
+      systems: [
+        "Electrical Wiring & Cabling",
+        "Power Socket & Switch Installation",
+        "Lighting Points & Fixtures",
+        "Dedicated Power Supply",
+        "TV/Display Power & Data Points",
+        "Conference Equipment Power Points",
+        "Electrical Distribution & Connections",
+        "Testing & Commissioning",
+      ],
+    },
   ];
 
   const filteredProjects =
