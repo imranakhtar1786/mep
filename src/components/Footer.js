@@ -1,7 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { FaLinkedinIn, FaInstagram, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import {
+  FaLinkedinIn,
+  FaInstagram,
+  FaWhatsapp,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+} from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,14 +20,15 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-14 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
-
           {/* Brand Info */}
           <div className="md:col-span-1 flex flex-col gap-6">
             <Link href="/" className="flex items-center gap-2 w-fit">
               <img src="/logo.png" alt="Logo" className="w-70" />
             </Link>
             <p className="font-sans text-xs text-gray-400 leading-relaxed font-light tracking-wide max-w-xs">
-              Engineering intelligent and sustainable infrastructure. Providing industry-leading Mechanical, Electrical, and Plumbing engineering services globally.
+              Engineering intelligent and sustainable infrastructure. Providing
+              industry-leading Mechanical, Electrical, and Plumbing engineering
+              services globally.
             </p>
             <div className="flex gap-4 mt-2">
               {/* <a
@@ -55,30 +63,47 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="flex flex-col gap-6 mt-5">
-            <h4 className="font-serif text-lg text-gold font-medium tracking-wider">Navigation</h4>
+            <h4 className="font-serif text-lg text-gold font-medium tracking-wider">
+              Navigation
+            </h4>
             <ul className="flex flex-col gap-3 font-sans text-xs tracking-wider">
               <li>
-                <Link href="/" className="text-gray-400 hover:text-white transition-colors duration-300 hover-gold-line w-fit block">
+                <Link
+                  href="/"
+                  className="text-gray-400 hover:text-white transition-colors duration-300 hover-gold-line w-fit block"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors duration-300 hover-gold-line w-fit block">
+                <Link
+                  href="/about"
+                  className="text-gray-400 hover:text-white transition-colors duration-300 hover-gold-line w-fit block"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-400 hover:text-white transition-colors duration-300 hover-gold-line w-fit block">
+                <Link
+                  href="/services"
+                  className="text-gray-400 hover:text-white transition-colors duration-300 hover-gold-line w-fit block"
+                >
                   MEP Services
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-gray-400 hover:text-white transition-colors duration-300 hover-gold-line w-fit block">
+                <Link
+                  href="/projects"
+                  className="text-gray-400 hover:text-white transition-colors duration-300 hover-gold-line w-fit block"
+                >
                   Our Projects
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors duration-300 hover-gold-line w-fit block">
+                <Link
+                  href="/contact"
+                  className="text-gray-400 hover:text-white transition-colors duration-300 hover-gold-line w-fit block"
+                >
                   Contact
                 </Link>
               </li>
@@ -132,8 +157,6 @@ export default function Footer() {
             </h4>
 
             <ul className="flex flex-col gap-4 font-sans text-xs text-gray-400 tracking-wide">
-
-
               <li className="flex items-center gap-3">
                 <FaPhoneAlt className="text-gold shrink-0" size={14} />
                 <span>+91 8507894280</span>
@@ -157,17 +180,16 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-[#C8A45D]/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 font-sans text-[10px] tracking-[0.2em] text-gray-500 uppercase">
-
+        <div className="border-t border-[#C8A45D]/10 mt-16 pt-8 flex flex-col items-center justify-center gap-5 text-center font-sans text-xs tracking-[0.12em] text-gray-500 md:flex-row md:justify-between md:text-left">
           <p>
-            © {currentYear} POWERON ELECTROTECH SOLUTIONS PRIVATE LIMITED. All rights reserved.
+            © {currentYear} POWERON ELECTROTECH SOLUTIONS PRIVATE LIMITED. All
+            rights reserved.
           </p>
 
-          <div className="flex gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
             <Link
               href="/privacy-policy"
               className="hover:text-white transition-colors duration-300"
@@ -181,10 +203,20 @@ export default function Footer() {
             >
               Terms of Service
             </Link>
+
+            <a
+              href="https://www.momentumlab.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Developed by Momentum Lab"
+              aria-label="Developed by Momentum Lab"
+              className="hover:text-[#D4AF37] transition-colors duration-300"
+            >
+              Developed by{" "}
+              <span className="font-semibold text-[#D4AF37]">Momentum Lab</span>
+            </a>
           </div>
-
         </div>
-
       </div>
     </footer>
   );
